@@ -117,5 +117,21 @@ The `config.markup` is the string rendered server side in your template. `#value
 }
 ```
 
+##### Sample macro config
+
+If you only want to expose certain macro's in the Grid Editors' `Choose type of content`, you can add individual macro's as follow:
+
+```json
+{
+    "name": "Your Custom Macro",
+    "alias": "yourCustomMacroGridEditor",
+    "view": "macro",
+    "icon": "icon-smiley",
+    "config": {
+        "macroAlias": "AliasOfYourMacro"
+    }
+}
+```
+
 In this sample `config.size` will resize the image according to `height` and `width`. The above example will result in a rendered image that is 200x200 pixels no matter the size of the uploaded image. If the ratio of the size differs from the uploaded image it is possible to set a focal point that determines how the image should be cropped.
 ![Resizing](images/grid-resizing.png)
